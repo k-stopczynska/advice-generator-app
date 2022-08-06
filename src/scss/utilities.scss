@@ -1,0 +1,43 @@
+/*colors*/
+$Light-Cyan: hsl(193, 38%, 86%);
+$Neon-Green: hsl(150, 100%, 66%);
+$Grayish-Blue: hsl(217, 19%, 38%);
+$Dark-Grayish-Blue: hsl(217, 19%, 24%);
+$Dark-Blue: hsl(218, 23%, 16%);
+$Neon-Green-Shadow: hsl(150, 100%, 66%, 0.5);
+
+/*fonts*/
+$font-quote: 28px;
+$font-advice: 12px;
+$font-family: "Manrope", sans-serif;
+
+/*border-radius*/
+$border-radius: 8px;
+
+
+
+/*breakpoint*/
+$breakpoint: (
+    "xs": 0,
+    "s": 480px,
+    'md': 720px
+);
+
+/*mixins*/
+
+@mixin xs {
+    @media(min-width: map-get($breakpoint, 'xs')) {
+        @content;
+    }
+}
+@mixin xs {
+    @media(min-width: map-get($breakpoint, 's')) {
+        @content;
+    }
+}
+@mixin md {
+    @media(min-width: map-get($breakpoint, 'md')) {
+        @content;
+    }
+}
+

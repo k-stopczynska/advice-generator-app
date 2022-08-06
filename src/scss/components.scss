@@ -1,0 +1,57 @@
+@use 'utilities' as *;
+
+h1 {
+    margin: 3em auto 2em;
+}
+
+.divider {
+    background: url('../../images/pattern-divider-mobile.svg') no-repeat center center;
+    color: $Grayish-Blue;
+    width: 90%;
+    height: 15px;
+    margin: 2em auto 3em;
+    @include md {
+        background: url('../../images/pattern-divider-desktop.svg') no-repeat center center;
+        width: 80%;
+    }
+}
+
+.quote {
+    text-align: center;
+    margin: 0 1em;
+}
+
+.quote::before {
+    content: open-quote;
+}
+
+.quote::after {
+    content: close-quote;
+}
+
+.cube {
+    background-image: url('../../images/icon-dice.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 35%;
+    background-color: $Neon-Green;
+    border-radius: 50%;
+    border: none;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 92%;
+}
+.cube:hover {
+    cursor: pointer;
+    box-shadow:  0 0 10px 10px $Neon-Green-Shadow;
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+
+.attribution a { 
+    color: $Neon-Green;
+}

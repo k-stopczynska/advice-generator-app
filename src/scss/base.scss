@@ -1,0 +1,58 @@
+@use "utilities" as *;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: $Dark-Blue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0.1;
+  }
+  25% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.container {
+  height: fit-content;
+  width: 90%;
+  background-color: $Dark-Grayish-Blue;
+  border-radius: $border-radius;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  animation: fade-in 0.6s ease-in forwards;
+  @include md {
+    width: 35%;
+  }
+}
+
+footer {
+  position: fixed;
+  bottom: 10px;
+  height: 15px;
+  width: 100%;
+  color: $Light-Cyan;
+}

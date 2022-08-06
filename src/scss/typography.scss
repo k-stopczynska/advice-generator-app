@@ -1,0 +1,17 @@
+
+@use 'utilities' as *;
+
+body {
+    font-family: $font-family;
+}
+
+h1 {
+    color: $Neon-Green;
+    text-transform: uppercase;
+    font-size: $font-advice;
+    letter-spacing: 3.5px;
+}
+.quote {
+    color: $Light-Cyan;
+    font-size: $font-quote;
+}

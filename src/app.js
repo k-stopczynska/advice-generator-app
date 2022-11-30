@@ -10,12 +10,12 @@ const getAdvice = async () => {
     throw new Error('something went wrong...')
   }
   const data = await response.json();
+  quote.innerText = data.slip.advice;
+  index.innerText = data.slip.id;
   }
   catch (error) {
     console.log(error)
   }
-  quote.innerText = data.slip.advice;
-  index.innerText = data.slip.id;
 };
 getAdvice();
 
